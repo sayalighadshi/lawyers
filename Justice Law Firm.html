@@ -645,11 +645,11 @@ footer h4{margin-bottom:15px;}
 
 <script>
 // FAQ toggle
-const faqs = document.querySelectorAll('.faq-item h4');
-faqs.forEach(faq => {
-    faq.addEventListener('click', () => {
-        const p = faq.nextElementSibling;
-        p.style.display = p.style.display === 'block' ? 'none' : 'block';
+const faqQuestions = document.querySelectorAll('.faq-item h4');
+faqQuestions.forEach(faqQuestion => {
+    faqQuestion.addEventListener('click', () => {
+        const faqAnswer = faqQuestion.nextElementSibling;
+        faqAnswer.style.display = faqAnswer.style.display === 'block' ? 'none' : 'block';
     });
 });
 </script>
