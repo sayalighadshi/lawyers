@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Justice Law Firm | Professional Legal Services</title>
+<meta name="description" content="Justice Law Firm offers expert legal services in civil, criminal, corporate, family, and property law. Trusted lawyers with proven results." />
+
+<!-- =========================
+     GOOGLE FONTS
+========================= -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- =========================
+     CSS STYLE
+========================= -->
+<style>
+/* =========================
+   GLOBAL STYLES
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#1f2937;
+    line-height:1.7;
+}
+
+img{max-width:100%;}
+
+a{text-decoration:none;color:inherit;}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:36px;
+    color:#0f172a;
+}
+
+.section-title p{
+    max-width:700px;
+    margin:10px auto 0;
+    color:#475569;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:#7c2d12;
+    color:#fff;
+    border-radius:6px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#9a3412;
+}
+
+/* =========================
+   HEADER
+========================= */
+header{
+    background:#0f172a;
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:#e5e7eb;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#fbbf24;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero{
+    background:linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.85)),url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
+    color:#fff;
+    padding:120px 0;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#e5e7eb;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about-grid h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.about-grid p{
+    margin-bottom:15px;
+    color:#475569;
+}
+
+/* =========================
+   PRACTICE AREAS
+========================= */
+.practice-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.practice-box{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.practice-box h4{
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.practice-box p{
+    color:#475569;
+}
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+.features{
+    background:#0f172a;
+    color:#fff;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.feature{
+    background:#020617;
+    padding:30px;
+    border-radius:10px;
+}
+
+.feature h4{
+    margin-bottom:10px;
+}
+
+/* =========================
+   TEAM
+========================= */
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.team-card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.team-card img{
+    height:300px;
+    width:100%;
+    object-fit:cover;
+}
+
+.team-card div{
+    padding:20px;
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+.testimonials{
+    background:#f1f5f9;
+}
+
+.testimonial-box{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+/* =========================
+   FAQ
+========================= */
+.faq-item{
+    margin-bottom:15px;
+}
+
+.faq-item h4{
+    cursor:pointer;
+    background:#e2e8f0;
+    padding:15px;
+}
+
+.faq-item p{
+    display:none;
+    padding:15px;
+    background:#fff;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+form input, form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #cbd5f5;
+    border-radius:6px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+    background:#020617;
+    color:#e5e7eb;
+    padding:40px 0;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+footer h4{margin-bottom:15px;}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:768px){
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+    .hero h1{font-size:36px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+<header>
+    <div class="container navbar">
+        <div class="logo">Justice Law</div>
+        <nav>
+            <ul>
+        
+
+
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#practice">Practice Areas</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#cases">Case Results</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#appointment">Appointment</a></li>
+    <li><a href="#team">Lawyers</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+
+
+
+
+
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero" id="home">
+    <div class="container hero-content">
+        <h1>Trusted Legal Solutions That Protect Your Rights</h1>
+        <p>We provide strategic, ethical, and result-driven legal services for individuals and businesses.</p>
+        <a href="#contact" class="btn">Free Consultation</a>
+    </div>
+</section>
+
+<!-- =========================
+     ABOUT
+========================= -->
+<section class="section" id="about">
+    <div class="container about-grid">
+        <div>
+            <h3>About Our Law Firm</h3>
+            <p>Justice Law Firm is built on integrity, professionalism, and client-first values.</p>
+            <p>With years of courtroom experience, our lawyers handle complex legal matters with confidence.</p>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf" alt="Law Office">
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     PRACTICE AREAS
+========================= -->
+<section class="section" id="practice">
+    <div class="container">
+        <div class="section-title">
+            <h2>Practice Areas</h2>
+            <p>Comprehensive legal expertise across multiple domains.</p>
+        </div>
+        <div class="practice-grid">
+            <div class="practice-box"><h4>Criminal Law</h4><p>Defense representation and legal strategy.</p></div>
+            <div class="practice-box"><h4>Civil Litigation</h4><p>Resolving disputes efficiently.</p></div>
+            <div class="practice-box"><h4>Family Law</h4><p>Divorce, custody, and settlements.</p></div>
+            <div class="practice-box"><h4>Corporate Law</h4><p>Business compliance and contracts.</p></div>
+            <div class="practice-box"><h4>Property Law</h4><p>Land and property dispute resolution.</p></div>
+            <div class="practice-box"><h4>Legal Advisory</h4><p>Professional legal consultation.</p></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section" id="services">
+<div class="container">
+<div class="section-title">
+<h2>Our Legal Services</h2>
+<p>Professional legal services tailored to your needs</p>
+</div>
+
+<div class="practice-grid">
+<div class="practice-box">
+<h4>Legal Consultation</h4>
+<p>One-on-one legal advice with experienced advocates.</p>
+</div>
+
+<div class="practice-box">
+<h4>Documentation & Drafting</h4>
+<p>Agreements, affidavits, notices, and legal documents.</p>
+</div>
+
+<div class="practice-box">
+<h4>Court Representation</h4>
+<p>Strong courtroom presence for civil & criminal cases.</p>
+</div>
+
+<div class="practice-box">
+<h4>Corporate Compliance</h4>
+<p>Legal compliance for startups and businesses.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+<section class="section" id="cases">
+<div class="container">
+<div class="section-title">
+<h2>Case Results</h2>
+<p>Our successful legal outcomes</p>
+</div>
+
+<div class="practice-grid">
+<div class="practice-box">
+<h4>Property Dispute</h4>
+<p>Won favorable settlement for client within 6 months.</p>
+</div>
+
+<div class="practice-box">
+<h4>Criminal Defense</h4>
+<p>Charges dismissed due to lack of evidence.</p>
+</div>
+
+<div class="practice-box">
+<h4>Divorce Case</h4>
+<p>Mutual consent divorce resolved smoothly.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- =========================
+     BLOG
+========================= -->
+<section class="section" id="blog">
+    <div class="container">
+        <div class="section-title">
+            <h2>Legal Insights & Articles</h2>
+            <p>Latest updates, legal tips, and expert knowledge.</p>
+        </div>
+
+        <div class="team-grid">
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f">
+                <div>
+                    <h4>Understanding Criminal Bail Process</h4>
+                    <p>Step-by-step guide to bail procedures in India.</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1555374018-13a8994ab246">
+                <div>
+                    <h4>Property Dispute Legal Rights</h4>
+                    <p>Know your ownership and dispute resolution rights.</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1528747045269-390fe33c19c3">
+                <div>
+                    <h4>Divorce Laws in India</h4>
+                    <p>Legal process and rights explained simply.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+<section class="section features">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose Us</h2>
+            <p>Client satisfaction and legal excellence.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature"><h4>Experienced Lawyers</h4><p>Years of proven success.</p></div>
+            <div class="feature"><h4>Transparent Fees</h4><p>No hidden charges.</p></div>
+            <div class="feature"><h4>24/7 Support</h4><p>We are always available.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     TEAM
+========================= -->
+<section class="section" id="team">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Lawyers</h2>
+            <p>Meet our experienced legal professionals.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1" />
+                <div><h4>Adv. Rahul Sharma</h4><p>Criminal Lawyer</p></div>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12" />
+                <div><h4>Adv. Neha Patel</h4><p>Family Lawyer</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     APPOINTMENT
+========================= -->
+<section class="section" id="appointment">
+    <div class="container">
+        <div class="section-title">
+            <h2>Book an Appointment</h2>
+            <p>Schedule a confidential consultation with our legal experts.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div>
+                <h3>Why Book With Us?</h3>
+                <p>✔ Free initial consultation</p>
+                <p>✔ Experienced advocates</p>
+                <p>✔ Confidential & secure discussion</p>
+                <p>✔ Quick response within 24 hours</p>
+            </div>
+
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="date" required>
+                <textarea rows="4" placeholder="Describe your legal issue"></textarea>
+                <button class="btn">Book Appointment</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+<section class="section" id="faq">
+    <div class="container">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-item">
+            <h4>How do I book a consultation?</h4>
+            <p>You can contact us via phone or the contact form.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Do you offer free consultation?</h4>
+            <p>Yes, first consultation is free.</p>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+     CONTACT
+========================= -->
+<section class="section" id="contact">
+    <div class="container contact-grid">
+        <div>
+            <h3>Contact Us</h3>
+            <p>Office Address: Mumbai, India</p>
+            <p>Phone: +91 7977193279</p>
+            <p>Email: ghadshisayali2@gmail.com</p>
+        </div>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <h4>Justice Law Firm </h4>
+            <p>Professional legal services you can trust.</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <p>Home | About | Practice | Contact</p>
+        </div>
+        <div>
+            <h4>Working Hours</h4>
+            <p>Mon - Sat : 9AM - 7PM</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// FAQ toggle
+const faqs = document.querySelectorAll('.faq-item h4');
+faqs.forEach(faq => {
+    faq.addEventListener('click', () => {
+        const p = faq.nextElementSibling;
+        p.style.display = p.style.display === 'block' ? 'none' : 'block';
+    });
+});
+</script>
+
+</body>
+</html>
